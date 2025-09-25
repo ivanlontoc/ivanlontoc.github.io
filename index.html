@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site Under Construction</title>
+  <meta charset="UTF-8">
+  <title>Under Construction</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #2e2e2e; /* dark gray background */
-      color: #eee;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      flex-direction: column;
       text-align: center;
     }
-    .circle {
-      background: #ffcc00;
-      border-radius: 50%;
-      width: 160px;
-      height: 160px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin-bottom: 20px;
+
+    .banner {
+      width: 100%;
+      max-width: 800px;
+      background-color: #FF4C4C;
+      color: white;
+      padding: 40px 20px;
+      font-size: 48px;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
     }
-    .circle::after {
-      /* simple hammer & wrench icon using Unicode */
-      content: "🔨🔧";
-      font-size: 3rem;
-      color: #2e2e2e;
+
+    .info {
+      font-size: 20px;
+      color: #333;
     }
-    .stripe {
-      width: 90%;
-      height: 25px;
-      background-image: repeating-linear-gradient(
-        -45deg,
-        #ffcc00 0 20px,
-        #000 20px 40px
-      );
-      border-radius: 6px;
-      margin-bottom: 25px;
+
+    .info a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
     }
-    h1 {
-      color: #ffcc00;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      margin: 0 0 10px 0;
+
+    .info a:hover {
+      text-decoration: underline;
     }
-    p {
-      max-width: 500px;
-      color: #ccc;
-      font-size: 1rem;
-      margin: 0 15px;
+
+    @media (max-width: 600px) {
+      .banner {
+        font-size: 32px;
+        padding: 30px 15px;
+      }
+
+      .info {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="circle"></div>
-  <div class="stripe"></div>
-  <h1>UNDER CONSTRUCTION</h1>
-  <p>
-    We’re building something awesome. Please check back soon for updates.
-  </p>
+  <div class="banner">UNDER CONSTRUCTION</div>
+  <div class="info">
+    Our website is coming soon.<br>
+    For inquiries, email us at <a href="mailto:ivan@ivanlontoc.com">ivan@ivanlontoc.com</a>
+  </div>
 </body>
 </html>
