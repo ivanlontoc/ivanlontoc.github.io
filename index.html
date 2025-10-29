@@ -4,105 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ivan Lontoc | Risk Management Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
-    body {
+    /* Reset and Base */
+    * {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #2E2B2C;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+        url('background.jpg') center/cover no-repeat fixed;
+      backdrop-filter: blur(8px);
       color: #fff;
-      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
     }
 
     header {
-      text-align: center;
-      padding: 30px 20px 0;
+      position: absolute;
+      top: 20px;
+      left: 30px;
     }
 
-    header img.logo {
-      width: 140px;
-      margin-bottom: 10px;
+    header img {
+      height: 50px;
+      width: auto;
     }
 
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 90vh;
-      flex-direction: column;
-      background: linear-gradient(
-          rgba(46, 43, 44, 0.8),
-          rgba(46, 43, 44, 0.8)
-        ),
-        url('background.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 40px 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      max-width: 800px;
-      margin: 40px auto;
+    .container {
+      max-width: 700px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid #bfa14a;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      box-shadow: 0 0 30px rgba(191, 161, 74, 0.3);
     }
 
-    .profile-img {
-      width: 160px;
-      height: 160px;
+    .profile-photo {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #D4AF37;
-      margin-bottom: 20px;
+      border: 3px solid #bfa14a;
+      margin-bottom: 1rem;
     }
 
     h1 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 8px;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
     }
 
     h2 {
-      color: #D4AF37;
-      font-weight: 400;
       font-size: 1.1rem;
-      margin-bottom: 20px;
+      color: #bfa14a;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      font-weight: 500;
     }
 
     p {
-      color: #B5B5B5;
-      font-size: 0.95rem;
+      color: #ddd;
+      font-size: 1rem;
       line-height: 1.6;
-      max-width: 600px;
-      margin: 0 auto 30px;
+      margin-bottom: 2rem;
     }
 
-    .cta {
+    .btn {
       display: inline-block;
-      background-color: #D4AF37;
-      color: #2E2B2C;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 14px 28px;
+      padding: 0.8rem 1.6rem;
+      background-color: #bfa14a;
+      color: #000;
+      font-weight: bold;
       border-radius: 30px;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
-    .cta:hover {
-      background-color: #b9972e;
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.85rem;
-      color: #B5B5B5;
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
     }
 
     .socials {
-      margin-top: 25px;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
     }
 
     .socials a {
-      color: #D4AF37;
-      margin: 0 10px;
+      color: #bfa14a;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
@@ -111,41 +116,39 @@
     .socials a:hover {
       color: #fff;
     }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
   </style>
 </head>
 <body>
-
+  <!-- Logo in Header -->
   <header>
-    <img src="logo.png" alt="Ivan Lontoc Logo" class="logo">
+    <img src="logo.png" alt="Ivan Lontoc Logo" />
   </header>
 
-  <main>
-    <img src="ivan-photo.jpg" alt="Ivan Lontoc" class="profile-img">
-    <h1>Ivan Lontoc</h1>
-    <h2>Risk Management Specialist</h2>
+  <div class="container">
+    <img src="photo.png" alt="Ivan Lontoc" class="profile-photo" />
+    <h2>Million Dollar Round Table Member</h2>
+    <h3>Risk Management Specialist</h3>
+    <h1>Adding value to people through financial literacy</h1>
     <p>
-      Ivan Lontoc is a dedicated Risk Management Specialist driven by a simple mission — 
-      to make people happy and add value to their lives through personal finance. 
-      With a strong specialization in risk management, he helps clients identify, manage, 
-      and transfer risks that could affect their financial stability and future goals. 
-      Guided by a commitment to world-class standards and continuous learning both locally 
-      and abroad, Ivan provides trusted, expert advice designed to empower individuals 
-      and families to achieve financial confidence and peace of mind.
+      Ivan Lontoc is a dedicated Risk Management Specialist driven by a simple mission — to make people happy and add value to their lives through personal finance. With a strong specialization in risk management, he helps clients identify, manage, and transfer risks that could affect their financial stability and future goals. Guided by a commitment to world-class standards and a continuous pursuit of excellence and learning both locally and abroad, Ivan provides trusted, expert advice designed to empower individuals and families to achieve financial confidence and peace of mind.
     </p>
 
-    <a href="https://book.ivanlontoc.com" class="cta">#TalkToLontoc — Book here</a>
+    <a href="https://book.ivanlontoc.com" class="btn">#TalkToLontoc — Book here</a>
 
     <div class="socials">
-      <a href="mailto:ivan@ivanlontoc.com">Email</a> |
-      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank">LinkedIn</a> |
-      <a href="https://www.instagram.com/stories/vanlontoc/" target="_blank">Instagram</a> |
+      <a href="mailto:ivan@ivanlontoc.com">Email</a>
+      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/stories/vanlontoc/" target="_blank">Instagram</a>
       <a href="https://www.facebook.com/IvanArnaizLontoc" target="_blank">Facebook</a>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    © 2025 Ivan Lontoc | #TalkToLontoc
-  </footer>
-
+  <footer>© 2025 Ivan Lontoc. All rights reserved.</footer>
 </body>
 </html>
