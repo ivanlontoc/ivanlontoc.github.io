@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ivan Arnaiz Lontoc | #TalkToLontoc</title>
+  <title>Ivan Lontoc | Risk Management Specialist</title>
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/1f3c9d6c84.js" crossorigin="anonymous"></script>
+
   <style>
     * {
       margin: 0;
@@ -15,15 +16,15 @@
 
     body {
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-        url("background.jpg") center/cover no-repeat fixed;
-      backdrop-filter: blur(6px);
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+        url('background.jpg') center/cover no-repeat fixed;
+      backdrop-filter: blur(8px);
       color: #fff;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      justify-content: flex-start;
       text-align: center;
       padding: 2rem;
     }
@@ -37,7 +38,12 @@
     header img {
       height: 50px;
       width: auto;
-      opacity: 0.9;
+      transition: all 0.6s ease;
+    }
+
+    header img:hover {
+      filter: drop-shadow(0 0 8px rgba(191, 161, 74, 0.8));
+      transform: scale(1.05);
     }
 
     .container {
@@ -47,6 +53,7 @@
       border-radius: 20px;
       padding: 3rem 2rem;
       box-shadow: 0 0 30px rgba(191, 161, 74, 0.3);
+      margin-top: 80px;
     }
 
     .profile-photo {
@@ -58,33 +65,25 @@
       margin-bottom: 1rem;
     }
 
-    h2 {
-      font-size: 1.4rem;
+    .name {
+      font-size: 1.1rem;
       color: #bfa14a;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 0 10px rgba(191, 161, 74, 0.5);
-    }
-
-    h3 {
-      font-size: 1rem;
-      color: #fff;
+      font-weight: 600;
       margin-bottom: 0.3rem;
-      font-weight: 400;
     }
 
-    h4 {
-      font-size: 1rem;
+    h2, h3 {
       color: #fff;
-      margin-bottom: 1rem;
-      font-weight: 400;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
     }
 
     h1 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
+      margin: 1rem 0 1.5rem;
       color: #fff;
-      margin: 1.2rem 0;
       font-weight: 400;
-      line-height: 1.4;
     }
 
     p {
@@ -94,38 +93,32 @@
       margin-bottom: 2rem;
     }
 
-    /* Elegant black + gold button */
     .btn {
       display: inline-block;
-      padding: 0.8rem 1.8rem;
-      background-color: transparent;
-      color: #bfa14a;
-      font-weight: 600;
-      border: 2px solid #bfa14a;
+      padding: 0.8rem 1.6rem;
+      background-color: #bfa14a;
+      color: #000;
+      font-weight: bold;
       border-radius: 30px;
       text-decoration: none;
       transition: all 0.3s ease;
-      box-shadow: 0 0 10px rgba(191, 161, 74, 0.15);
     }
 
     .btn:hover {
-      background-color: #bfa14a;
+      background-color: #fff;
       color: #000;
-      box-shadow: 0 0 20px rgba(191, 161, 74, 0.6);
-      transform: translateY(-2px);
     }
 
     .socials {
       margin-top: 2rem;
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .socials a {
       color: #bfa14a;
-      text-decoration: none;
-      font-weight: 500;
+      font-size: 1.5rem;
       transition: color 0.3s ease;
     }
 
@@ -133,8 +126,83 @@
       color: #fff;
     }
 
+    /* Testimonials Slider */
+    .testimonials {
+      max-width: 800px;
+      overflow: hidden;
+      border: 1px solid #bfa14a;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      margin-top: 3rem;
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .testimonials h2 {
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .testimonial-wrapper {
+      display: flex;
+      transition: transform 0.8s ease;
+    }
+
+    .testimonial {
+      flex: 0 0 100%;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #bfa14a;
+    }
+
+    /* Navigation arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #bfa14a;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.5);
+      transition: 0.3s ease;
+      z-index: 10;
+    }
+
+    .arrow:hover {
+      color: #fff;
+      background: rgba(191, 161, 74, 0.2);
+    }
+
+    .left-arrow {
+      left: 20px;
+    }
+
+    .right-arrow {
+      right: 20px;
+    }
+
     footer {
-      margin-top: 2rem;
+      margin-top: 3rem;
       font-size: 0.85rem;
       color: #777;
     }
@@ -146,11 +214,11 @@
   </header>
 
   <div class="container">
-    <img src="photo.png" alt="Ivan Arnaiz Lontoc" class="profile-photo" />
-    <h2>Ivan Arnaiz Lontoc</h2>
-    <h3>Million Dollar Round Table Member</h3>
-    <h4>Risk Management Specialist</h4>
+    <img src="photo.png" alt="Ivan Lontoc" class="profile-photo" />
 
+    <div class="name">Ivan Arnaiz Lontoc</div>
+    <h2>Million Dollar Round Table Member</h2>
+    <h3>Risk Management Specialist</h3>
     <h1>Adding value to people through financial literacy</h1>
 
     <p>
@@ -160,13 +228,84 @@
     <a href="https://book.ivanlontoc.com" class="btn">#TalkToLontoc — Book here</a>
 
     <div class="socials">
-      <a href="mailto:ivan@ivanlontoc.com">Email</a>
-      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/stories/vanlontoc/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/IvanArnaizLontoc" target="_blank">Facebook</a>
+      <a href="mailto:ivan@ivanlontoc.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/stories/vanlontoc/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/IvanArnaizLontoc" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <h2>What People Say</h2>
+
+    <div class="arrow left-arrow" id="prev"><i class="fas fa-chevron-left"></i></div>
+    <div class="arrow right-arrow" id="next"><i class="fas fa-chevron-right"></i></div>
+
+    <div class="testimonial-wrapper" id="testimonial-wrapper">
+      <div class="testimonial">
+        <p>"The detailed explanation of the nature of insurances, their added value to its customers, and comprehensive discussion aids that helped me understand more of the endorsed products."</p>
+        <div class="author">Joedel</div>
+        <div class="role">Client</div>
+      </div>
+
+      <div class="testimonial">
+        <p>"The contents of the insurance was discussed clearly and professionaly"</p>
+        <div class="author">Patrick</div>
+        <div class="role">Client</div>
+      </div>
+
+      <div class="testimonial">
+        <p>"What struck me the most is the way how Sir Ivan explains thoroughly the details of each benefits and how he answers all my queries. "</p>
+        <div class="author">Ida Nelle</div>
+        <div class="role">Client</div>
+      </div>
     </div>
   </div>
 
   <footer>© 2025 Ivan Lontoc. All rights reserved.</footer>
+
+  <script>
+    const wrapper = document.getElementById("testimonial-wrapper");
+    const nextBtn = document.getElementById("next");
+    const prevBtn = document.getElementById("prev");
+
+    // Clone first and last slides for seamless loop
+    const firstClone = wrapper.children[0].cloneNode(true);
+    const lastClone = wrapper.children[wrapper.children.length - 1].cloneNode(true);
+    wrapper.appendChild(firstClone);
+    wrapper.insertBefore(lastClone, wrapper.firstChild);
+
+    let index = 1;
+    const slides = wrapper.children;
+    const total = slides.length;
+    const width = 100;
+
+    wrapper.style.transform = `translateX(-${index * width}%)`;
+
+    function moveSlide(dir) {
+      wrapper.style.transition = "transform 0.8s ease";
+      index += dir;
+      wrapper.style.transform = `translateX(-${index * width}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => moveSlide(1));
+    prevBtn.addEventListener("click", () => moveSlide(-1));
+
+    wrapper.addEventListener("transitionend", () => {
+      if (slides[index].isSameNode(firstClone)) {
+        wrapper.style.transition = "none";
+        index = 1;
+        wrapper.style.transform = `translateX(-${index * width}%)`;
+      }
+      if (slides[index].isSameNode(lastClone)) {
+        wrapper.style.transition = "none";
+        index = total - 2;
+        wrapper.style.transform = `translateX(-${index * width}%)`;
+      }
+    });
+
+    // Auto slide every 5s
+    setInterval(() => moveSlide(1), 5000);
+  </script>
 </body>
 </html>
