@@ -6,13 +6,10 @@
   <title>Ivan Lontoc | Risk Management Specialist</title>
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- ✅ Updated Font Awesome CDN (v6.5.2) -->
+  <!-- ✅ Verified Font Awesome (Working CDN, no integrity check) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-pIVpCzIh8NFFc8qPQ0dlHnPH9d5KTRkGOBq8ShDgKpqEahmXtY4SxQ9Bv48Q+FQIk0tM2nO8r3B5gN6AJlKQ5A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
   />
 
   <style>
@@ -117,24 +114,6 @@
       color: #000;
     }
 
-    .socials {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .socials a {
-      color: #bfa14a;
-      font-size: 1.7rem;
-      transition: color 0.3s ease;
-    }
-
-    .socials a:hover {
-      color: #fff;
-    }
-
     /* Testimonials Slider */
     .testimonials {
       max-width: 800px;
@@ -209,10 +188,30 @@
       right: 20px;
     }
 
+    /* Footer Social Media */
     footer {
       margin-top: 3rem;
-      font-size: 0.85rem;
-      color: #777;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .footer-socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .footer-socials a {
+      color: #bfa14a;
+      font-size: 1.8rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-socials a:hover {
+      color: #fff;
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -234,16 +233,6 @@
     </p>
 
     <a href="https://book.ivanlontoc.com" class="btn">#TalkToLontoc — Book here</a>
-
-    <div class="socials">
-      <a href="mailto:ivan@ivanlontoc.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/vanlontoc/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.facebook.com/IvanArnaizLontoc" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://www.youtube.com/@ivanlontoc" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      <a href="https://www.tiktok.com/@ivanlontoc" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="https://t.me/ivanlontoc" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-    </div>
   </div>
 
   <div class="testimonials">
@@ -273,7 +262,15 @@
     </div>
   </div>
 
-  <footer>© 2025 Ivan Lontoc. All rights reserved.</footer>
+  <footer>
+    <div>© 2025 Ivan Lontoc. All rights reserved.</div>
+    <div class="footer-socials">
+      <a href="mailto:ivan@ivanlontoc.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/vanlontoc/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/IvanArnaizLontoc" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </footer>
 
   <script>
     const wrapper = document.getElementById("testimonial-wrapper");
@@ -314,7 +311,7 @@
       }
     });
 
-    // Auto scroll every 5 seconds (right to left)
+    // Auto scroll every 5 seconds
     setInterval(() => moveSlide(1), 5000);
   </script>
 </body>
