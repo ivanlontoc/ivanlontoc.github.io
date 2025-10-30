@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ivan Lontoc | Risk Management Specialist</title>
   <link rel="icon" type="image/png" href="favicon.png" />
-  <script src="https://kit.fontawesome.com/1f3c9d6c84.js" crossorigin="anonymous"></script>
+
+  <!-- ✅ Updated Font Awesome CDN (v6.5.2) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-pIVpCzIh8NFFc8qPQ0dlHnPH9d5KTRkGOBq8ShDgKpqEahmXtY4SxQ9Bv48Q+FQIk0tM2nO8r3B5gN6AJlKQ5A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
   <style>
     * {
@@ -113,12 +121,13 @@
       margin-top: 2rem;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 1.5rem;
     }
 
     .socials a {
       color: #bfa14a;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       transition: color 0.3s ease;
     }
 
@@ -173,7 +182,6 @@
       color: #bfa14a;
     }
 
-    /* Navigation arrows */
     .arrow {
       position: absolute;
       top: 50%;
@@ -228,10 +236,13 @@
     <a href="https://book.ivanlontoc.com" class="btn">#TalkToLontoc — Book here</a>
 
     <div class="socials">
-      <a href="mailto:ivan@ivanlontoc.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/stories/vanlontoc/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/IvanArnaizLontoc" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:ivan@ivanlontoc.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/ivan-lontoc-mdrt-16671592/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/vanlontoc/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/IvanArnaizLontoc" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@ivanlontoc" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@ivanlontoc" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://t.me/ivanlontoc" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
     </div>
   </div>
 
@@ -243,19 +254,19 @@
 
     <div class="testimonial-wrapper" id="testimonial-wrapper">
       <div class="testimonial">
-        <p>"The detailed explanation of the nature of insurance, their added value to its customers, and comprehensive discussion aids that helped me understand more of the endorsed products."</p>
+        <p>"The detailed explanation of the nature of insurance, its added value to customers, and the comprehensive discussion aids helped me better understand the endorsed products."</p>
         <div class="author">Joedel</div>
         <div class="role">Client</div>
       </div>
 
       <div class="testimonial">
-        <p>"The contents of the insurance were discussed clearly and professionally"</p>
+        <p>"The contents of the insurance were discussed clearly and professionally."</p>
         <div class="author">Patrick</div>
         <div class="role">Client</div>
       </div>
 
       <div class="testimonial">
-        <p>"What struck me the most is the way Sir Ivan explains thoroughly the details of each benefit and how he answers all my queries. "</p>
+        <p>"What struck me the most was the way Sir Ivan thoroughly explained every detail of each benefit and how he answered all my questions."</p>
         <div class="author">Ida Nelle</div>
         <div class="role">Client</div>
       </div>
@@ -269,7 +280,6 @@
     const nextBtn = document.getElementById("next");
     const prevBtn = document.getElementById("prev");
 
-    // Clone first and last slides for seamless loop
     const firstClone = wrapper.children[0].cloneNode(true);
     const lastClone = wrapper.children[wrapper.children.length - 1].cloneNode(true);
     wrapper.appendChild(firstClone);
@@ -304,7 +314,7 @@
       }
     });
 
-    // Auto slide every 5s
+    // Auto scroll every 5 seconds (right to left)
     setInterval(() => moveSlide(1), 5000);
   </script>
 </body>
